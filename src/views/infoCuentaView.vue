@@ -44,7 +44,7 @@
             <div class="card-body">
               <div class="row mb-3">
                 <div class="col-md-2">
-                  <img src="ruta-a-la-imagen-del-paquete" alt="Imagen del Paquete" class="img-fluid">
+                  <img src="../components/img/como_hacer_jabones_artesanales_naturales_de_hierbas_1136_orig.jpg" alt="Imagen del Paquete" class="img-fluid">
                 </div>
                 <div class="col-md-10">
                   <h5 class="mb-0">Nombre del Paquete</h5>
