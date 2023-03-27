@@ -8,7 +8,7 @@
             </div>
             <div class="card-body">
               <div class="text-center mb-3">
-                <img src="ruta-a-la-imagen-de-perfil" alt="Imagen de Perfil" class="rounded-circle" style="width: 100px;">
+                <img src="../components/img/HD-wallpaper-natural-medicine-imunitatii-ficatului-detoxifirea-intarirea.jpg" alt="Imagen de Perfil" class="rounded-circle" style="width: 100px;">
               </div>
               <div class="form-group">
                 <label for="nombre">Nombre:</label>
@@ -62,3 +62,6 @@
     </div>
   </template>
   
+
+    <script setup>
+    </script>
