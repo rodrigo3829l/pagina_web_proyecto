@@ -26,6 +26,14 @@ const router = createRouter({
       component: () => import('../views/loginView.vue')
     },
     {
+      path: '/cuenta',// no requeire inicio de sesion
+      name: 'login',
+      // meta : {
+      //   auth: true
+      // },
+      component: () => import('../views/infoCuentaView.vue')
+    },
+    {
       path: '/ventas',// no requiere inicio de sesion
       name: 'ventas',
       component: () => import('../views/ventasView.vue')
