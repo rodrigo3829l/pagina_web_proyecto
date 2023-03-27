@@ -33,7 +33,7 @@
       <div class="row mt-4">
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card h-100">
-            <img src="../components/img/WhatsApp Image 2023-03-25 at 8.19.32 AM.jpeg" class="card-img-top" alt="...">
+            <img src="../components/img/rodrig.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Rodrigo Del Angel Gerardo</h5>
               <p class="card-text">Lider del equipo</p>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card h-100">
-            <img src="../components/img/WhatsApp Image 2023-03-26 at 11.26.49 AM.jpeg" class="card-img-top" alt="...">
+            <img src="../components/img/aveina.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Avelina Hernandez Hernandez</h5>
               <p class="card-text">Diseño de interfaces</p>
@@ -53,7 +53,7 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card h-100">
-            <img src="../components/img/WhatsApp Image 2023-03-26 at 11.11.44 AM.jpeg" class="card-img-top" alt="...">
+            <img src="../components/img/miguel.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Miguel Lara Hernandez</h5>
               <p class="card-text">Desarrallador de interfaces</p>
@@ -63,7 +63,7 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card h-100">
-            <img src="../components/img/WhatsApp Image 2023-03-26 at 11.11.44 AM (1).jpeg" class="card-img-top" alt="...">
+            <img src="../components/img/julio.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Julio Cesar</h5>
               <p class="card-text">Miembro mas importante del equipo</p>
