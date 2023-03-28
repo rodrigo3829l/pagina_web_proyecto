@@ -27,10 +27,10 @@ const router = createRouter({
     },
     {
       path: '/cuenta',// no requeire inicio de sesion
-      name: 'login',
-      // meta : {
-      //   auth: true
-      // },
+      name: 'cuenta',
+      meta : {
+        auth: true
+      },
       component: () => import('../views/infoCuentaView.vue')
     },
     {
