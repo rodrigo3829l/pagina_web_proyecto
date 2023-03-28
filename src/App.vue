@@ -49,18 +49,18 @@ const logout = async () =>{
               <li><button class="nav-boton" @click="accion">Menu</button></li>
               <li><a class="nav-enlace desaparece"><RouterLink to="/">Home</RouterLink></a></li>
               <li v-if="!userStore.token"><a class="nav-enlace desaparece"><RouterLink to="/login">Login</RouterLink></a></li>
-              <li v-if="!user || user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/ventas">Comprar</RouterLink></a></li>
-              <li v-if="user ===  'User'"><a class="nav-enlace desaparece"><RouterLink to="/carrito">Carrito</RouterLink></a></li>
-              <li v-if="!user || user !==  'Admin'" ><a class="nav-enlace desaparece"><RouterLink to="/productos">Productos</RouterLink></a></li>
-              <li v-if="!user || user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/contacto">Contacto</RouterLink></a></li> 
-              <li v-if="user ===  'User'"><a class="nav-enlace desaparece"><RouterLink to="/cuenta">Perfil</RouterLink></a></li> 
+              <li v-if="userStore.token && user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/ventas">Comprar</RouterLink></a></li>
+              <li v-if="userStore.token && user ===  'User'"><a class="nav-enlace desaparece"><RouterLink to="/carrito">Carrito</RouterLink></a></li>
+              <li v-if="!userStore.token || user !==  'Admin'" ><a class="nav-enlace desaparece"><RouterLink to="/productos">Productos</RouterLink></a></li>
+              <li v-if="!userStore.token || user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/contacto">Contacto</RouterLink></a></li> 
+              <li v-if="userStore.token && user ===  'User'"><a class="nav-enlace desaparece"><RouterLink to="/cuenta">Perfil</RouterLink></a></li> 
               
-              <li v-if=" user && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/getVentas">Ventas</RouterLink></a></li>
-              <li v-if=" user && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/verUsers">Usuarios</RouterLink></a></li>
-              <li v-if=" user && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/verProducts">Productos</RouterLink></a></li>
-              <li v-if=" user && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/paque">Paquetes</RouterLink></a></li>
-              <li v-if=" user && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/verEncargados">Encargados</RouterLink></a></li>
-              <li v-if="user && user ===  'User'"><a class="nav-enlace desaparece" href="https://proyectonh.com/project/">Producto iot</a></li>
+              <li v-if=" userStore.token && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/getVentas">Ventas</RouterLink></a></li>
+              <li v-if=" userStore.token && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/verUsers">Usuarios</RouterLink></a></li>
+              <li v-if=" userStore.token && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/verProducts">Productos</RouterLink></a></li>
+              <li v-if=" userStore.token && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/paque">Paquetes</RouterLink></a></li>
+              <li v-if=" ususerStore.tokener && user === 'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/verEncargados">Encargados</RouterLink></a></li>
+              <li v-if="userStore.token && user ===  'User'"><a class="nav-enlace desaparece" href="https://proyectonh.com/project/">Producto iot</a></li>
               <li v-if="userStore.token"><a class="nav-enlace desaparece"  href="" @click="userStore.logout">Cerrar sesion</a></li> 
 
 
