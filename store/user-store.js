@@ -14,7 +14,7 @@ export const useUserStore = defineStore('user', () => {
         }
         try {
             const {data} = await api.post('/auth/login', datos)
-            // console.log(data)
+            console.log(data)
             token.value = data.token;
             expireIn.value = data.expiresIn
             setTime();
@@ -35,18 +35,18 @@ export const useUserStore = defineStore('user', () => {
     }
     const logout = async () => {
         try {
-            
             await api.get('/auth/logout')
         } catch (error) {
             console.log(error)
         } finally{
             localStorage.clear();
-            resetStore()
+            resetStore();
         }
     }
     const resetStore = () =>{
-        token.value = null,
-        expireIn.value = null
+        token.value = null;
+        expireIn.value = null;
+        localStorage.clear();
     }
     const setTime = () =>{
         setTimeout(() => {

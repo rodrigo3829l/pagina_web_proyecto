@@ -8,7 +8,8 @@
             </div>
             <div class="card-body">
               <div class="text-center mb-3">
-                <img src="../components/img/HD-wallpaper-natural-medicine-imunitatii-ficatului-detoxifirea-intarirea.jpg" alt="Imagen de Perfil" class="rounded-circle" style="width: 100px;">
+                <img v-if="usuario.img.secure_url" :src="usuario.img.secure_url" alt="Imagen de Perfil" class="" style="width: 100px; border-radius: 16px;">
+                <img v-else src="../components/img/como_hacer_jabones_artesanales_naturales_de_hierbas_1136_orig.jpg" alt="Imagen de Perfil" class="" style="width: 100px; border-radius: 16px;">
               </div>
               <div class="form-group">
                 <label for="nombre">Nombre:</label>

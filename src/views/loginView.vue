@@ -54,7 +54,7 @@
                 document.querySelector("#usuario").value,
                 document.querySelector("#password").value
                 )
-                router.push('/')
+                // router.push('/')
         }
         userStore.refreshToken();
         const forgot = () =>{
