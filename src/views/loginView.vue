@@ -54,7 +54,9 @@
                 document.querySelector("#usuario").value,
                 document.querySelector("#password").value
                 )
-                router.push('/')
+                alert('Inicio de sesion exitoso');
+                router.push('/');
+
         }
         userStore.refreshToken();
         const forgot = () =>{
