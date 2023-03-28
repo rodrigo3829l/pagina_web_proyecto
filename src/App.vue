@@ -49,7 +49,7 @@ const logout = async () =>{
               <li><button class="nav-boton" @click="accion">Menu</button></li>
               <li><a class="nav-enlace desaparece"><RouterLink to="/">Home</RouterLink></a></li>
               <li v-if="!userStore.token"><a class="nav-enlace desaparece"><RouterLink to="/login">Login</RouterLink></a></li>
-              <li v-if="userStore.token && user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/ventas">Comprar</RouterLink></a></li>
+              <li v-if="!userStore.token || user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/ventas">Comprar</RouterLink></a></li>
               <li v-if="userStore.token && user ===  'User'"><a class="nav-enlace desaparece"><RouterLink to="/carrito">Carrito</RouterLink></a></li>
               <li v-if="!userStore.token || user !==  'Admin'" ><a class="nav-enlace desaparece"><RouterLink to="/productos">Productos</RouterLink></a></li>
               <li v-if="!userStore.token || user !==  'Admin'"><a class="nav-enlace desaparece"><RouterLink to="/contacto">Contacto</RouterLink></a></li> 
