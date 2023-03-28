@@ -29,7 +29,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-success btn-block mt-4">Ingresar</button>
                             </form>
-                            <label for="usuario">{{ userStore.token }}</label>
+                            <!-- <label for="usuario">{{ userStore.token }}</label> -->
                         </div>
                         <div class="card-footer bg-light">
                             <div class="text-center">
@@ -54,7 +54,7 @@
                 document.querySelector("#usuario").value,
                 document.querySelector("#password").value
                 )
-                // router.push('/')
+                router.push('/')
         }
         userStore.refreshToken();
         const forgot = () =>{
