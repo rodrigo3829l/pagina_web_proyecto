@@ -50,12 +50,22 @@
         const router = useRouter();
 
         const login = async () =>{
-           await userStore.login(
+           try {
+                const res = await userStore.login(
                 document.querySelector("#usuario").value,
                 document.querySelector("#password").value
                 )
-                alert('Inicio de sesion exitoso');
-                router.push('/');
+                console.log(res)
+                if(res.exito){
+                    alert(res.exito)
+                    router.push('/')
+                }
+                else{
+                    alert(res.error)
+                }
+           } catch (error) {
+                console.log(error)
+           }
 
         }
         userStore.refreshToken();

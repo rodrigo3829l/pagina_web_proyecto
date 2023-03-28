@@ -29,8 +29,11 @@ export const useUserStore = defineStore('user', () => {
             localStorage.setItem('tipo', resp.data.tipo)
             const ventas = []
             localStorage.setItem('venta', JSON.stringify(ventas))
+            return({exito : 'inicio se sesion exitoso'})
         } catch (error) {
-            console.log(error)
+            console.log(error.response.data.error);
+            // alert(error.response.data.error)
+            return({error: error.response.data.error})
         }
     }
     const logout = async () => {

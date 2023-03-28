@@ -16,7 +16,9 @@
 
     function obtenerConstantes() {
         user.value = localStorage.getItem('tipo');
-        userStore.refreshToken();
+        if(userStore.token){
+            userStore.refreshToken();
+        }
     }
 
     // Ejecutar la función obtenerConstantes cada 500ms
