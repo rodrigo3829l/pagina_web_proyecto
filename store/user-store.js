@@ -42,14 +42,18 @@ export const useUserStore = defineStore('user', () => {
         } catch (error) {
             console.log(error)
         } finally{
-            localStorage.clear();
+            // localStorage.clear();
+            localStorage.removeItem('tipo');
+        localStorage.removeItem('venta');
             resetStore();
         }
     }
     const resetStore = () =>{
         token.value = null;
         expireIn.value = null;
-        localStorage.clear();
+        // localStorage.clear();
+        localStorage.removeItem('tipo');
+        localStorage.removeItem('venta');
     }
     const setTime = () =>{
         setTimeout(() => {
@@ -74,7 +78,9 @@ export const useUserStore = defineStore('user', () => {
             setTime();
         } catch (error) {
             console.log(error)
-            localStorage.removeItem('tipo')
+            // localStorage.removeItem('tipo')
+            localStorage.removeItem('tipo');
+        localStorage.removeItem('venta');
         }
     }
     return {
