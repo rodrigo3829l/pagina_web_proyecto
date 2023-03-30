@@ -38,13 +38,15 @@ export const useUserStore = defineStore('user', () => {
     }
     const logout = async () => {
         try {
+            localStorage.removeItem('tipo');
+             localStorage.removeItem('venta');
             await api.get('/auth/logout')
         } catch (error) {
             console.log(error)
         } finally{
             // localStorage.clear();
             localStorage.removeItem('tipo');
-        localStorage.removeItem('venta');
+             localStorage.removeItem('venta');
             resetStore();
         }
     }
