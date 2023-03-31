@@ -68,7 +68,9 @@
            }
 
         }
-        userStore.refreshToken();
+        if(userStore.token){
+            userStore.refreshToken();
+        }
         const forgot = () =>{
             router.push('/recuperar')
         }

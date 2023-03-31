@@ -187,7 +187,6 @@ router.beforeEach( async (to, from, next) =>{
 
   if(requiereLog){
     console.log(to)
-    await userStore.refreshToken();
     if(userStore.token){
       return next ('/');
     }
@@ -196,17 +195,21 @@ router.beforeEach( async (to, from, next) =>{
 
   if(requiereAuth){
     console.log(to)
-    await userStore.refreshToken();
-    if (tipoUser === "User"){
-        return next(); 
+    if(userStore.token){
+      await userStore.refreshToken();
+      if (tipoUser === "User"){
+          return next(); 
+      }
     }
     return next("/login");
   }
   if(requiereAdmin){
     console.log(to)
-    await userStore.refreshToken();
-    if(tipoUser === "Admin"){
-      return next();  
+    if(userStore.token){
+      await userStore.refreshToken();
+      if(tipoUser === "Admin"){
+        return next();  
+      }
     }
     return next("/login");
   }
